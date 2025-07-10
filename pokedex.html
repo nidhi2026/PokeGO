@@ -17,6 +17,28 @@
             <a href="pikachu.html" target="_blank"><li>PIKA-PIKA</li></a>
         </ul>
     </header>
+    <div style="text-align: center; margin: 20px; position: relative; display: flex; justify-content: center;">
+  <input 
+    type="text" 
+    id="searchBar" 
+    placeholder="Search Pokémon..." 
+    style="width: 60%; padding: 10px 40px 10px 10px; border-radius: 8px; font-size: 16px; border: 1px solid #ccc;"
+  >
+  <button 
+    id="clearSearch" 
+    style="position: absolute; right: 20%; background: none; border: none; font-size: 18px; cursor: pointer;"
+    title="Clear"
+  >
+    ❌
+  </button>
+</div>
+
+<div id="no-results" style="display: none; text-align: center; color: red; font-weight: bold; margin-top: 10px;">
+  No Pokémon found.
+</div>
+
+
+
     <section class="structure">
         <table class="tab" id="electric">
             <tr>
@@ -24,7 +46,7 @@
                     Electric
                 </td>
                 <td>
-                    <p>
+                    <p class="pokemon-list">
                         Pichu, Pikachu, Raichu, Jolteon, Zapdos, Mareep, Plusle, Minun, Shinx, Flaffy, Ampharos, Pachirisu, Emolga, Heloiptile, Heliolisk, Dedenne
                     </p>
                 </td>
@@ -36,7 +58,7 @@
                     Grass
                 </td>
                 <td>
-                    <p>
+                    <p class="pokemon-list">
                         Bulbasaur, Ivysaur, Venusaur, Chikorita, Bayleaf, Bellossom, Roselia, Leafeon, Snivy, Servine, Sewaddle, Serperior, Swadloon, Leavanny, Pansage, Chespin, Quilladin, Chesnaught
                     </p>
                 </td>
@@ -48,7 +70,7 @@
                     Ice
                 </td>
                 <td>
-                    <p>
+                    <p class="pokemon-list">
                         Lapras, Articuno, Glaceon, Aurorus, Amaura, Vanillite,  Vanillish, Vanilluxe
                     </p>
                 </td>
@@ -60,7 +82,7 @@
                     Poison
                 </td>
                 <td>
-                    <p>
+                    <p class="pokemon-list">
                         Weedle, Ekans, Gloom, Oddish, Tentacool, Tentacruel, Seviper
                     </p>
                 </td>
@@ -72,7 +94,7 @@
                     Bug
                 </td>
                 <td>
-                    <p>
+                    <p class="pokemon-list">
                         Caterpie, Butterfree, Scyther, Beautifly, Surskit, Combee, Vivillon
                     </p>
                 </td>
@@ -84,7 +106,7 @@
                     Dark
                 </td>
                 <td>
-                    <p>
+                    <p class="pokemon-list">
                         Umbreon, Inkay, Malamar, Haundour, Purrloin, Liepard, Zorua, Zoruak
                     </p>
                 </td>
@@ -96,7 +118,7 @@
                     Fire
                 </td>
                 <td>
-                    <p>
+                    <p class="pokemon-list">
                         Charmander, Charmeleon, Charizard, Vulpix, Ninetales, Ponyta, Rapidash, Flareon, Moltres, Cyndaquil, Fennekin, Braixen, Derphox, Ho Oh, Torchic, Combusken, Blaziken, Pansear, Reshiram, Fletchling, Fletchinder, Talonflame 
                     </p>
                 </td>
@@ -108,7 +130,7 @@
                    Water 
                 </td>
                 <td>
-                    <p>
+                    <p class="pokemon-list">
                         Squirtle, Wartortle, Blastoise, Gyarados, Vaporeon, Totodile, Piplup, Oshawott, Panpour, Froakie, Frogadier, Greninja
                     </p>
                 </td>
@@ -120,7 +142,7 @@
                     Fairy
                 </td>
                 <td>
-                    <p>
+                    <p class="pokemon-list">
                         Clefairy, Jiglipuff, Mr Mime, Togepi, Ralts, Gardevoir, Kirlia, Mawile, Flabebe, Floette, Florges, Sylveon, Dedenne
                     </p>
                 </td>
@@ -132,7 +154,7 @@
                    Psychic 
                 </td>
                 <td>
-                    <p>
+                    <p class="pokemon-list">
                         Abra, Kdabra, Alakazam, Jynx, Mewto, Mew, Espeon, Wynaut, Wobbaffet, Lugia, Celebi, Ralts, Latias, Latios, Jirachi, Meowstic, Inkay, Malamar
                     </p>
                 </td>
@@ -144,7 +166,7 @@
                     Dragon
                 </td>
                 <td>
-                    <p>
+                    <p class="pokemon-list">
                         Dragonite, Salamence, Gible, Axew, Reshiram, Zekrom, Goomy, Noibat
                     </p>
                 </td>
@@ -156,7 +178,7 @@
                     Rock
                 </td>
                 <td>
-                    <p>Onix, Aerodactyl, Bonsly, Corsola, Solrock, Lunatone</p>
+                    <p class="pokemon-list">Onix, Aerodactyl, Bonsly, Corsola, Solrock, Lunatone</p>
                 </td>
             </tr>
         </table>
@@ -166,7 +188,7 @@
                    Ground 
                 </td>
                 <td>
-                    <p>Phanpy, Sandile, Sandshrew, Diglett, Nidoking</p>
+                    <p class="pokemon-list">Phanpy, Sandile, Sandshrew, Diglett, Nidoking</p>
                 </td>
             </tr>
         </table>
@@ -176,7 +198,7 @@
                     Flying
                 </td>
                 <td>
-                    <p>
+                    <p class="pokemon-list">
                         Butterfree, Pidgey, Hoothoot, Skarmory, Lugia, Beautifly, Taillow, Emolga, Fletchling, Vivillon, Hawlucha, Noibat
                     </p>
                 </td>
@@ -188,7 +210,7 @@
                     Fighting
                 </td>
                 <td>
-                    <p>
+                    <p class="pokemon-list">
                         Machop, Machoke, Machamp, Hawlucha, Hitmonlee, Combusken, Blaziken, Riolu, Lucario, Gallade, Panchum, Pangaroo
                     </p>
                 </td>
@@ -200,7 +222,7 @@
                     Ghost
                 </td>
                 <td>
-                    <p>
+                    <p class="pokemon-list">
                         Ghastly, Haunter, Gengar, Pumpkaboo, Gourgeist
                     </p>
                 </td>
@@ -214,5 +236,7 @@
             <a href="https://www.youtube.com/@PokemonAsiaENG" target="_blank"><li>YouTube</li></a>
         </ul>
     </footer>
+    <script src="script.js"></script>
+
 </body>
 </html>
