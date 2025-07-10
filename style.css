@@ -226,7 +226,8 @@ h2{
     margin-top: 15vh;
 }
 .elec:hover{
-    box-shadow:5px 4px 10px #32a0f0;
+    box-shadow:5px 4px 10px #f0f0f0;
+;
     transition:300ms;
 }
 .mew{
@@ -428,4 +429,60 @@ h2{
 .tab:hover{
     color: rgb(0, 255, 183);
     transform: scale(1.01);
+}
+
+.welcome-box {
+  position: fixed;           /* fixed ensures it stays in corner even when scrolling */
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 9999;             /* ensures it stays above other elements */
+}
+
+.welcome-img {
+  height: 150px;              /* medium size */
+  width: auto;
+}
+
+.type-text {
+  font-size: 22px;
+  font-weight: bold;
+  color:white;
+  font-family: 'Segoe UI', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #222;
+  animation: typing 1.5s steps(5, end), blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 3ch }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+.pokemon-list {
+  color: #f0f0f0;
+
+}
+
+
+.pokemon-list a {
+  color: white !important;
+  text-decoration: none;
+}
+
+.pokemon-list a:hover {
+  color: rgb(255, 217, 0);
+}
+
+
+.pikacha h2 {
+  color: orange; /* or any bright contrasting color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* optional: makes it pop */
 }
